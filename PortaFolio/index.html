@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend & UI Portfolio</title>
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+
+    <!-- Inter Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Language Switch -->
+    <div class="lang-switch">
+      <button data-lang="es">ES</button>
+      <button data-lang="en">EN</button>
+    </div>
+
+    <!-- HERO -->
+    <header class="hero">
+      <div class="container hero-content">
+        <span class="hero-eyebrow">Frontend · UI Design</span>
+
+        <h1 data-i18n="hero_title"></h1>
+
+        <p class="hero-subtitle text-muted" data-i18n="hero_subtitle"></p>
+
+        <div class="hero-actions">
+          <a
+            href="#projects"
+            class="btn btn-primary-custom"
+            data-i18n="hero_cta_primary"
+          ></a>
+          <!-- Botón contacto eliminado para evitar scroll confuso -->
+        </div>
+      </div>
+    </header>
+
+     <!-- ABOUT / SOBRE MÍ -->
+    <section id="about" class="fade-up">
+      <div class="container">
+        <h2 data-i18n="about_title"></h2>
+        <p data-i18n="about_text"></p>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="fade-up">
+      <div class="container">
+        <h2 class="mb-4" data-i18n="projects_title"></h2>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <div class="card project-card fade-up">
+              <img
+                src="assets/images/projects/premium-motors.png"
+                class="card-img-top"
+                alt="Premium Motors project"
+              />
+              <div class="card-body">
+                <h3 data-i18n="project_pm_title"></h3>
+                <p class="text-muted" data-i18n="project_pm_desc"></p>
+
+                <ul class="project-meta">
+                  <li>
+                    <strong data-i18n="role_label"></strong>: Frontend & UI
+                  </li>
+                  <li>
+                    <strong data-i18n="stack_label"></strong>: HTML, CSS,
+                    JavaScript, Bootstrap
+                  </li>
+                </ul>
+
+                <div class="mt-3 d-flex gap-2">
+                  <a href="#" class="btn btn-primary-custom btn-sm">Demo</a>
+                  <a href="#" class="btn btn-secondary-custom btn-sm">GitHub</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Podés duplicar más cards para otros proyectos -->
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS / HABILIDADES -->
+    <section id="skills" class="fade-up">
+      <div class="container">
+        <h2 data-i18n="skills_title"></h2>
+
+        <!-- Lenguajes & Frameworks -->
+        <h3>Lenguajes & Frameworks</h3>
+        <div class="skills-grid">
+          <div class="skill"><i class="fa-brands fa-html5"></i> HTML</div>
+          <div class="skill"><i class="fa-brands fa-css3-alt"></i> CSS</div>
+          <div class="skill"><i class="fa-brands fa-js"></i> JavaScript</div>
+          <div class="skill">
+            <i class="fa-brands fa-bootstrap"></i> Bootstrap
+          </div>
+        </div>
+
+        <!-- Herramientas -->
+        <h3>Herramientas</h3>
+        <div class="skills-grid">
+          <div class="skill"><i class="fa-brands fa-git-alt"></i> Git</div>
+          <div class="skill"><i class="fa-brands fa-github"></i> GitHub</div>
+        </div>
+
+        <!-- Diseño / UI -->
+        <h3>Diseño / UI</h3>
+        <div class="skills-grid">
+          <div class="skill">
+            <i class="fa-regular fa-object-ungroup"></i> UI Design
+          </div>
+          <div class="skill"><i class="fa-brands fa-figma"></i> Figma</div>
+        </div>
+      </div>
+    </section>
+    <!-- FOOTER CON CONTACTO -->
+   <footer class="fade-up">
+  <div class="container text-center">
+    <h2>Contacto</h2>
+    <p class="text-muted">¿Querés trabajar juntos o tenés una consulta?</p>
+    
+    <div class="contact-links">
+      <a href="mailto:nicoozan2@gmail.com" class="btn btn-primary-custom">
+        <i class="fas fa-envelope"></i> Email
+      </a>
+      <a href="https://www.linkedin.com/in/tuusuario" target="_blank" class="btn btn-secondary-custom">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+      <a href="https://github.com/nicoo-glitch?tab=projects" target="_blank" class="btn btn-secondary-custom">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+      <a href="https://wa.me/+5492617115423" target="_blank" class="btn btn-success-custom">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+      </a>
+    </div>
+
+    <!-- COPYRIGHT / NOTA -->
+    <small class="footer-note mt-3 d-block text-muted">
+      &copy; 2026 Nico Ozan. Todos los derechos reservados.
+    </small>
+  </div>
+</footer>
+
+
+    <!-- JS -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
