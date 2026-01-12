@@ -1,50 +1,43 @@
-# Portfolio — Frontend Developer & UI Designer
+# 🌐 Portfolio Frontend & UI — Nico Ozan
 
-Este es mi portfolio personal, donde presento mis proyectos de desarrollo frontend y diseño de interfaces (UI).  
-Actualmente estoy estudiando **Full Stack Development** y construyendo proyectos web conceptuales y funcionales, enfocados en una buena experiencia de usuario y una presentación visual cuidada.
-
-## 🌐 Portfolio Online
-👉 Demo: https://tu-portfolio.netlify.app
-
-## 🚀 Proyecto Destacado
-
-### Premium Motors — Sitio Web Conceptual
-Proyecto web conceptual para una concesionaria de vehículos de alta gama.
-
-**Características:**
-- Diseño moderno y minimalista
-- Layout responsive (desktop, tablet y mobile)
-- Animaciones sutiles y micro-interacciones
-- Soporte multi-idioma (ES / EN)
-
-**Tecnologías utilizadas:**
-- HTML
-- CSS (Flexbox + Variables)
-- JavaScript (Vanilla)
-- Bootstrap
-- Git & GitHub
-
-👉 Demo: https://tu-proyecto-demo.netlify.app  
-👉 Código: https://github.com/tuusuario/portfolio
-
-## 🧠 Sobre mí
-Soy desarrollador frontend con enfoque en diseño UI.  
-Aunque soy nuevo en el desarrollo profesional, trabajo en proyectos web conceptuales cuidando la estructura, la experiencia de usuario y los detalles visuales.  
-Actualmente estoy estudiando Full Stack y mejorando mis habilidades cada día para crear proyectos cada vez más sólidos y profesionales.
-
-## 🛠️ Habilidades
-- Frontend Development (HTML, CSS, JavaScript)
-- Responsive Design
-- UI Design
-- Bootstrap
-- Git & GitHub
-
-## 📬 Contacto
-- Email: nicozan2@gmail.com
-- LinkedIn: https://www.linkedin.com/in/tuusuario
-- GitHub: https://github.com/tuusuario
-- WhatsApp: https://wa.me/xxxxxxxxxx
+Este es mi portfolio personal como **Desarrollador Frontend & Diseñador UI**, donde muestro proyectos conceptuales, habilidades técnicas y enfoque de trabajo.  
+El objetivo es transmitir claridad, profesionalismo y cuidado en los detalles, tanto para **recruiters** como para **clientes**.
 
 ---
 
-© 2026 Nico Ozan. Todos los derechos reservados.
+## 🚀 Tecnologías principales
+- **Lenguajes:** HTML, CSS, JavaScript
+- **Frameworks:** Bootstrap
+- **Herramientas:** Git, GitHub, Figma
+- **Diseño/UI:** Interfaces limpias, jerarquía visual, accesibilidad básica
+
+---
+
+## 📂 Estructura del sitio
+- **Hero:** Presentación y propuesta de valor
+- **About:** Breve descripción personal y enfoque
+- **Services:** Qué ofrezco (UI, frontend, prototipos, colaboración)
+- **Process:** Mi forma de trabajar (descubrir, diseñar, construir, documentar)
+- **Projects:** Proyectos conceptuales destacados
+- **Skills:** Stack técnico y herramientas
+- **Contact:** Formas de contacto y disponibilidad
+
+---
+
+## 🎨 Características visuales
+- Estilo **dark premium** sobrio y moderno
+- Animaciones sutiles con `IntersectionObserver`
+- Microinteracciones en botones e íconos
+- Diseño responsive y accesible
+- Internacionalización (ES/EN)
+
+---
+
+## 📌 Objetivo del portfolio
+- **Empleo en relación de dependencia** (part-time, remoto)
+- **Freelancing** con clientes que busquen interfaces claras y profesionales
+- **Agencia propia** a futuro, mostrando capacidad de diseño y desarrollo
+
+---
+
+© 2026 Nico Ozan — Todos los derechos reservados.
