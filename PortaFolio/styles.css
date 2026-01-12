@@ -5,14 +5,14 @@
 :root {
   --bg-main: #0c0c1c;      /* fondo principal */
   --bg-section: #12122c;   /* fondo secciones alternadas */
-  --bg-card: #1a1a3c;      /* fondo de cards y skills */
+  --bg-card: #171732;      /* fondo de cards y skills (ajustado) */
 
   --text-main: #e6e6f0;    /* texto principal */
-  --text-muted: #9aa0b0;   /* textos secundarios */
+  --text-muted: #aeb6c1;   /* textos secundarios (ajustado) */
 
-  --accent: #1e90ff;       /* acento para botones e iconos */
+  --accent: #4F46E5;       /* acento sobrio premium (indigo 600) */
 
-  --radius: 16px;           /* bordes redondeados */
+  --radius: 16px;          /* bordes redondeados */
 }
 
 /* =====================
@@ -34,8 +34,12 @@ body {
   scroll-behavior: smooth;
 }
 
+.container {
+  max-width: 960px;
+}
+
 section {
-  padding: 6rem 0;
+  padding: 5rem 0;
 }
 
 section:nth-of-type(even) {
@@ -52,6 +56,7 @@ h1 {
 h2 {
   position: relative;
   display: inline-block;
+  font-weight: 600;
 }
 
 h2::after {
@@ -65,9 +70,14 @@ h2::after {
   opacity: 0.7;
 }
 
+#about h2::after {
+  width: 30%;
+  opacity: 0.8;
+}
+
 h3 {
   font-size: 1.4rem;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .text-muted {
@@ -98,6 +108,13 @@ a:hover {
 
 a:hover::after {
   width: 100%;
+}
+
+/* Estado de foco accesible */
+a:focus-visible, .btn:focus-visible, button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 8px;
 }
 
 /* =====================
@@ -161,8 +178,8 @@ a:hover::after {
   display: flex;
   align-items: center;
   background:
-    radial-gradient(circle at 20% 20%, rgba(30,144,255,0.12), transparent 55%),
-    radial-gradient(circle at 80% 80%, rgba(30,144,255,0.06), transparent 60%);
+    radial-gradient(circle at 20% 20%, rgba(79,70,229,0.12), transparent 55%),
+    radial-gradient(circle at 80% 80%, rgba(79,70,229,0.08), transparent 60%);
 }
 
 .hero-content {
@@ -184,15 +201,142 @@ a:hover::after {
 }
 
 .hero-actions {
-  margin-top: 2.5rem;
+  margin-top: 2.0rem;
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
 }
 
+.hero-meta {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+}
+
+/* =====================
+   HERO BACKGROUND ANIMATION
+===================== */
+.hero {
+  background: radial-gradient(circle at 20% 20%, rgba(79,70,229,0.12), transparent 55%),
+              radial-gradient(circle at 80% 80%, rgba(79,70,229,0.08), transparent 60%);
+  animation: heroGradientShift 20s ease-in-out infinite alternate;
+}
+
+@keyframes heroGradientShift {
+  0% {
+    background-position: 20% 20%, 80% 80%;
+  }
+  100% {
+    background-position: 25% 25%, 75% 75%;
+  }
+}
+
+/* =====================
+   SCROLL REVEAL VARIATIONS
+===================== */
+.fade-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.fade-left.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fade-right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.fade-right.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* =====================
+   MICROINTERACCIONES EN BOTONES
+===================== */
+.btn-primary-custom {
+  position: relative;
+  overflow: hidden;
+}
+.btn-primary-custom::after {
+  content: "";
+  position: absolute;
+  top: 0; left: -100%;
+  width: 100%; height: 100%;
+  background: rgba(255,255,255,0.15);
+  transition: left 0.4s ease;
+}
+.btn-primary-custom:hover::after {
+  left: 0;
+}
+
+/* Ripple sutil en botones secundarios */
+.btn-secondary-custom {
+  position: relative;
+  overflow: hidden;
+}
+.btn-secondary-custom::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  width: 10px; height: 10px;
+  background: rgba(255,255,255,0.15);
+  transform: scale(0);
+  opacity: 0;
+  pointer-events: none;
+}
+.btn-secondary-custom:hover::after {
+  animation: ripple 0.6s linear;
+}
+@keyframes ripple {
+  from {
+    transform: scale(0);
+    opacity: 0.6;
+  }
+  to {
+    transform: scale(12);
+    opacity: 0;
+  }
+}
+
+/* =====================
+   ICONOS DE SKILLS CON PULSE
+===================== */
+.skill i {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.skill:hover i {
+  transform: scale(1.1);
+  color: var(--accent);
+}
+
+/* =====================
+   CONSISTENCIA EN TRANSICIONES
+===================== */
+button, .btn, .skill, .service-card, .process-card {
+  transition: all 0.3s ease;
+}
+
+
 /* =====================
    BUTTONS
 ===================== */
+
+.btn {
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
 
 .btn-primary-custom {
   border: 1px solid var(--accent);
@@ -230,24 +374,6 @@ a:hover::after {
 }
 
 /* =====================
-   BUTTON INTERACTIONS
-===================== */
-
-.btn {
-  transition:
-    background-color 0.3s ease,
-    color 0.3s ease,
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
-  cursor: pointer;
-}
-
-.btn:hover {
-  transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-}
-
-/* =====================
    PROJECTS LAYOUT
 ===================== */
 
@@ -265,9 +391,7 @@ a:hover::after {
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-/* =====================
-   NOMBRE DEL PROYECTO VISIBLE
-===================== */
+/* NOMBRE DEL PROYECTO VISIBLE */
 .project-card h3,
 .project-card h3 a,
 .card-body h3 {
@@ -282,9 +406,9 @@ a:hover::after {
 }
 
 .project-card:hover {
-  transform: translateY(-6px) perspective(800px) rotateX(2deg);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4),
-              0 0 0 1px rgba(30,144,255,0.15);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.35),
+              0 0 0 1px rgba(79,70,229,0.15);
 }
 
 .card-body h3 {
@@ -312,17 +436,6 @@ a:hover::after {
 /* =====================
    ABOUT / SKILLS
 ===================== */
-
-#about h2::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -8px;
-  width: 30%;
-  height: 2px;
-  background-color: var(--accent);
-  opacity: 0.8;
-}
 
 #about p {
   margin-top: 1rem;
@@ -370,6 +483,26 @@ a:hover::after {
 }
 
 /* =====================
+   SERVICES & PROCESS
+===================== */
+
+.services-grid .service-card,
+.process-grid .process-card {
+  background-color: var(--bg-card);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+
+.services-grid .service-card:hover,
+.process-grid .process-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.24);
+}
+
+/* =====================
    CONTACT LINKS / FOOTER
 ===================== */
 
@@ -388,13 +521,13 @@ footer p {
   margin-bottom: 1rem;
   color: var(--text-muted);
 }
+
 .footer-note {
   font-size: 0.8rem;
   color: var(--text-muted);
   margin-top: 1rem;
   display: block;
 }
-
 
 .contact-links {
   display: flex;
@@ -422,6 +555,7 @@ footer p {
 .hero-content > *:nth-child(2) { animation-delay: 0.2s; }
 .hero-content > *:nth-child(3) { animation-delay: 0.3s; }
 .hero-content > *:nth-child(4) { animation-delay: 0.4s; }
+.hero-content > *:nth-child(5) { animation-delay: 0.5s; }
 
 @keyframes heroFadeUp {
   to {
@@ -447,20 +581,6 @@ footer p {
 }
 
 /* =====================
-   3D CARD HOVER
-===================== */
-
-.project-card {
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-6px) perspective(800px) rotateX(2deg);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4),
-              0 0 0 1px rgba(30,144,255,0.15);
-}
-
-/* =====================
    RESPONSIVE
 ===================== */
 
@@ -473,3 +593,16 @@ footer p {
     justify-content: center;
   }
 }
+
+/* =====================
+   PREFERS REDUCED MOTION
+===================== */
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+}
+
