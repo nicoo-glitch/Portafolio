@@ -1,27 +1,36 @@
 // =====================
-// TRADUCCIONES
+// TRADUCCIONES ACTUALIZADAS
 // =====================
 const translations = {
   es: {
-    hero_title: "Desarrollador Frontend y Diseñador UI",
-    hero_subtitle: "Diseño y construyo interfaces web claras, modernas y orientadas a resultados. Enfocado en HTML, CSS, JavaScript y Bootstrap.",
-    hero_cta_primary: "Ver proyecto destacado",
-    hero_cta_secondary: "Contacto",
+    // Hero
+    hero_badge: "Disponible para proyectos",
+    hero_title_part1: "Convierto",
+    hero_title_highlight1: "ideas",
+    hero_title_part2: "en",
+    hero_title_part3: "interfaces que",
+    hero_title_highlight2: "venden",
+    hero_subtitle: "Frontend Developer especializado en crear experiencias web que combinan estética premium con código limpio.",
+    hero_cta_primary: "Ver mi trabajo",
+    hero_cta_secondary: "Hablemos",
 
-    projects_title: "Proyecto destacado",
-    project_pm_title: "Premium Motors — Sitio Web Conceptual",
-    project_pm_desc: "Prototipo de sitio para una concesionaria premium. Enfoque en estructura clara, jerarquía visual, diseño sobrio y componentes reutilizables.",
-    project_kpis_label: "Enfoque",
-    project_kpis_value: "Accesibilidad básica, navegación clara, performance inicial y consistencia UI",
+    // Stats
+    stat_years: "Años",
+    stat_projects: "Proyectos",
+    stat_remote: "Remoto",
 
-    role_label: "Rol",
-    stack_label: "Tecnologías",
-
+    // About
     about_title: "Sobre mí",
-    about_text: "Soy desarrollador frontend con enfoque en diseño UI. Trabajo en proyectos conceptuales que priorizan estructura, experiencia de usuario y detalle visual. Aprendo rápido, documento bien y cuido la calidad. Busco oportunidades part-time, remotas y freelance, colaborando con clientes y empresas para llevar ideas a interfaces sólidas y profesionales.",
-    skills_title: "Habilidades",
-    skills_intro: "Stack principal: HTML, CSS, JavaScript y Bootstrap. Herramientas: Git, GitHub y Figma.",
+    about_lead: "Frontend Developer con obsesión por los detalles y pasión por crear interfaces que no solo se ven bien, sino que convierten y escalan.",
+    about_text: "Combino diseño UI con desarrollo frontend para entregar proyectos completos, desde el wireframe hasta el deploy. Mi enfoque: código limpio, componentes reutilizables y experiencias memorables.",
+    highlight_code_title: "Código limpio",
+    highlight_code_desc: "Semántico, accesible y mantenible",
+    highlight_design_title: "Diseño pensado",
+    highlight_design_desc: "UX/UI que prioriza al usuario",
+    highlight_performance_title: "Performance first",
+    highlight_performance_desc: "Optimización desde el día uno",
 
+    // Services
     services_title: "Servicios",
     services_intro: "Aporto valor combinando desarrollo frontend y diseño UI para acelerar entregas y reducir retrabajo.",
     service_ui: "Diseño de interfaces (UI)",
@@ -33,6 +42,7 @@ const translations = {
     service_collab: "Colaboración ágil",
     service_collab_desc: "Comunicación clara, documentación y entregables ordenados.",
 
+    // Process
     process_title: "Proceso de trabajo",
     process_discover_title: "Descubrir",
     process_discover_desc: "Entiendo objetivos, usuarios y restricciones para alinear expectativas.",
@@ -43,35 +53,62 @@ const translations = {
     process_document_title: "Documentar",
     process_document_desc: "Entregables claros, repos ordenados y notas para continuidad.",
 
-    contact_title: "Contacto",
-    contact_text: "¿Querés trabajar juntos o tenés una consulta? Estoy disponible part-time, remoto y freelance.",
+    // Projects
+    projects_title: "Proyecto destacado",
+    projects_subtitle: "Casos reales de diseño y desarrollo",
+    project_pm_title: "Premium Motors",
+    project_pm_desc: "Sitio web conceptual para concesionaria premium. Enfoque en jerarquía visual, microinteracciones y performance optimizada.",
+    view_project: "Ver proyecto",
+    load_time: "Carga",
+    stack_label: "Stack:",
+    live_demo: "Live Demo",
+    code_label: "Código",
+
+    // Skills
+    skills_title: "Habilidades",
+    skills_languages: "Lenguajes & Frameworks",
+    skills_tools: "Herramientas",
+    skills_design: "Diseño / UI",
+
+    // Contact
+    contact_title: "Trabajemos juntos",
+    contact_text: "¿Tenés un proyecto en mente o querés charlar? Estoy disponible part-time, remoto y freelance.",
     footer_note: "© 2026 Nico Ozan. Proyecto conceptual con fines educativos."
   },
 
   en: {
-    hero_title: "Frontend Developer & UI Designer",
-    hero_subtitle: "I design and build clean, modern, results-oriented web interfaces. Focused on HTML, CSS, JavaScript and Bootstrap.",
-    hero_cta_primary: "View featured project",
-    hero_cta_secondary: "Contact",
+    // Hero
+    hero_badge: "Available for projects",
+    hero_title_part1: "I turn",
+    hero_title_highlight1: "ideas",
+    hero_title_part2: "into",
+    hero_title_part3: "interfaces that",
+    hero_title_highlight2: "convert",
+    hero_subtitle: "Frontend Developer specialized in creating web experiences that combine premium aesthetics with clean code.",
+    hero_cta_primary: "View my work",
+    hero_cta_secondary: "Let's talk",
 
-    projects_title: "Featured Project",
-    project_pm_title: "Premium Motors — Conceptual Website",
-    project_pm_desc: "Conceptual site for a premium car dealership. Focus on clear structure, visual hierarchy, sober design and reusable components.",
-    project_kpis_label: "Focus",
-    project_kpis_value: "Basic accessibility, clear navigation, initial performance and UI consistency",
+    // Stats
+    stat_years: "Years",
+    stat_projects: "Projects",
+    stat_remote: "Remote",
 
-    role_label: "Role",
-    stack_label: "Stack",
-
+    // About
     about_title: "About Me",
-    about_text: "I’m a frontend developer focused on UI design. I work on conceptual projects that prioritize structure, UX and visual detail. I learn fast, document well and care about quality. I’m available part-time, remote and freelance to help clients and teams turn ideas into solid, professional interfaces.",
-    skills_title: "Skills",
-    skills_intro: "Core stack: HTML, CSS, JavaScript and Bootstrap. Tools: Git, GitHub and Figma.",
+    about_lead: "Frontend Developer with an obsession for details and a passion for creating interfaces that not only look good, but convert and scale.",
+    about_text: "I combine UI design with frontend development to deliver complete projects, from wireframe to deployment. My focus: clean code, reusable components and memorable experiences.",
+    highlight_code_title: "Clean code",
+    highlight_code_desc: "Semantic, accessible and maintainable",
+    highlight_design_title: "Thoughtful design",
+    highlight_design_desc: "UX/UI that prioritizes the user",
+    highlight_performance_title: "Performance first",
+    highlight_performance_desc: "Optimization from day one",
 
+    // Services
     services_title: "Services",
     services_intro: "I deliver value by combining frontend development and UI design to speed up delivery and reduce rework.",
     service_ui: "Interface Design (UI)",
-    service_ui_desc: "Clean wireframes and components, consistent and ready to implement.",
+    service_ui_desc: "Clean, consistent wireframes and components ready to implement.",
     service_frontend: "Frontend Development",
     service_frontend_desc: "HTML, CSS, JavaScript and Bootstrap with best practices, semantics and accessibility.",
     service_prototyping: "Concept Prototypes",
@@ -79,24 +116,43 @@ const translations = {
     service_collab: "Agile Collaboration",
     service_collab_desc: "Clear communication, documentation and organized deliverables.",
 
+    // Process
     process_title: "Work Process",
     process_discover_title: "Discover",
-    process_discover_desc: "Understand goals, users and constraints to align expectations.",
+    process_discover_desc: "I understand goals, users and constraints to align expectations.",
     process_design_title: "Design",
-    process_design_desc: "Define visual hierarchy, components and micro-interactions.",
+    process_design_desc: "I define visual hierarchy, components and micro-interactions.",
     process_build_title: "Build",
     process_build_desc: "Clean implementation with HTML, CSS, JS and Bootstrap.",
     process_document_title: "Document",
     process_document_desc: "Clear deliverables, organized repos and notes for continuity.",
 
-    contact_title: "Contact",
-    contact_text: "Interested in working together or have a question? I’m available part-time, remote and freelance.",
+    // Projects
+    projects_title: "Featured Project",
+    projects_subtitle: "Real cases of design and development",
+    project_pm_title: "Premium Motors",
+    project_pm_desc: "Conceptual website for a premium car dealership. Focus on visual hierarchy, micro-interactions and optimized performance.",
+    view_project: "View project",
+    load_time: "Load",
+    stack_label: "Stack:",
+    live_demo: "Live Demo",
+    code_label: "Code",
+
+    // Skills
+    skills_title: "Skills",
+    skills_languages: "Languages & Frameworks",
+    skills_tools: "Tools",
+    skills_design: "Design / UI",
+
+    // Contact
+    contact_title: "Let's Work Together",
+    contact_text: "Have a project in mind or want to chat? I'm available part-time, remote and freelance.",
     footer_note: "© 2026 Nico Ozan. Conceptual project for educational purposes."
   }
 };
 
 // =====================
-// FUNCION CAMBIO DE IDIOMA (accesible)
+// CAMBIO DE IDIOMA (accesible)
 // =====================
 function setLanguage(lang) {
   document.documentElement.lang = lang;
@@ -127,15 +183,8 @@ document.querySelectorAll("[data-lang]").forEach(btn => {
   });
 });
 
-// Activar botón correcto al cargar
-document.querySelectorAll("[data-lang]").forEach(btn => {
-  btn.classList.toggle("active", btn.dataset.lang === savedLang);
-  btn.setAttribute("aria-pressed", btn.dataset.lang === savedLang ? "true" : "false");
-  if (btn.dataset.lang === savedLang) btn.setAttribute("aria-current", "true");
-});
-
 // =====================
-// SCROLL SUAVE PARA ENLACES INTERNOS (respetando reduced motion)
+// SCROLL SUAVE (respetando reduced motion)
 // =====================
 const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
@@ -146,7 +195,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     if (!target) return;
 
     const switchRect = document.querySelector('.lang-switch')?.getBoundingClientRect();
-    const offset = switchRect ? switchRect.height + 40 : 80;
+    const offset = switchRect ? switchRect.height + 60 : 100;
 
     const targetTop = target.getBoundingClientRect().top + window.scrollY - offset;
 
@@ -158,7 +207,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // =====================
-// ANIMACIONES SCROLL Y HERO
+// INTERSECTION OBSERVER PARA SCROLL ANIMATIONS
 // =====================
 const observer = new IntersectionObserver(
   entries => {
@@ -169,16 +218,188 @@ const observer = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.15, rootMargin: "0px 0px -80px 0px" }
+  { threshold: 0.12, rootMargin: "0px 0px -60px 0px" }
 );
 
 document.querySelectorAll(".fade-up").forEach(el => {
   observer.observe(el);
 });
 
-// Micro-delay secuencial en cards y skills y services/process
-document.querySelectorAll('.project-card, .skill, .service-card, .process-card').forEach((el, i) => {
-  el.style.transitionDelay = `${i * 0.1}s`;
+// =====================
+// CURSOR PERSONALIZADO
+// =====================
+if (!prefersReduced) {
+  const cursor = document.querySelector('.custom-cursor');
+  const cursorTrail = document.querySelector('.cursor-trail');
+
+  if (cursor && cursorTrail) {
+    document.addEventListener('mousemove', (e) => {
+      cursor.style.left = e.clientX + 'px';
+      cursor.style.top = e.clientY + 'px';
+
+      setTimeout(() => {
+        cursorTrail.style.left = e.clientX + 'px';
+        cursorTrail.style.top = e.clientY + 'px';
+      }, 80);
+    });
+
+    // Cambiar cursor en hover de elementos interactivos
+    const interactiveElements = document.querySelectorAll('a, button, .btn-premium, .btn-outline-premium, .skill, .service-card, .process-card, .project-card');
+    
+    interactiveElements.forEach(el => {
+      el.addEventListener('mouseenter', () => {
+        cursor.style.transform = 'translate(-50%, -50%) scale(1.8)';
+        cursor.style.background = 'var(--accent-primary)';
+        cursor.style.borderColor = 'transparent';
+      });
+
+      el.addEventListener('mouseleave', () => {
+        cursor.style.transform = 'translate(-50%, -50%) scale(1)';
+        cursor.style.background = 'transparent';
+        cursor.style.borderColor = 'var(--accent-primary)';
+      });
+    });
+  }
+}
+
+// =====================
+// EFECTO MAGNETIC EN BOTONES
+// =====================
+if (!prefersReduced) {
+  document.querySelectorAll('.btn-premium, .btn-outline-premium').forEach(btn => {
+    btn.addEventListener('mousemove', (e) => {
+      const rect = btn.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
+
+      btn.style.transform = `translate(${x * 0.15}px, ${y * 0.15}px)`;
+    });
+
+    btn.addEventListener('mouseleave', () => {
+      btn.style.transform = 'translate(0, 0)';
+    });
+  });
+}
+
+// =====================
+// PARALLAX SUAVE EN HERO
+// =====================
+if (!prefersReduced) {
+  let ticking = false;
+
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        const scrolled = window.scrollY;
+        const hero = document.querySelector('.hero-content');
+        
+        if (hero && scrolled < window.innerHeight) {
+          hero.style.transform = `translateY(${scrolled * 0.25}px)`;
+          hero.style.opacity = 1 - (scrolled / 600);
+        }
+        
+        ticking = false;
+      });
+      
+      ticking = true;
+    }
+  });
+}
+
+// =====================
+// CONTADOR ANIMADO EN STATS
+// =====================
+const animateCounter = (element, target, suffix = '') => {
+  let current = 0;
+  const increment = target / 40;
+  const duration = 1500;
+  const stepTime = duration / 40;
+
+  const timer = setInterval(() => {
+    current += increment;
+    if (current >= target) {
+      element.textContent = target;
+      clearInterval(timer);
+    } else {
+      element.textContent = Math.floor(current);
+    }
+  }, stepTime);
+};
+
+const statsObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const statNumbers = entry.target.querySelectorAll('.stat-number');
+      statNumbers.forEach(stat => {
+        const targetText = stat.textContent.trim();
+        const target = parseInt(targetText);
+        const suffix = stat.dataset.suffix || '';
+        
+        if (!isNaN(target)) {
+          stat.textContent = '0';
+          setTimeout(() => {
+            animateCounter(stat, target, suffix);
+            if (suffix) {
+              setTimeout(() => {
+                stat.textContent = target + suffix;
+              }, 1500);
+            }
+          }, 300);
+        }
+      });
+      statsObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.5 });
+
+const heroStats = document.querySelector('.hero-stats');
+if (heroStats) statsObserver.observe(heroStats);
+
+// =====================
+// EFECTO RIPPLE EN CLICKS
+// =====================
+if (!prefersReduced) {
+  document.addEventListener('click', (e) => {
+    const ripple = document.createElement('div');
+    ripple.className = 'ripple-effect';
+    ripple.style.left = e.clientX + 'px';
+    ripple.style.top = e.clientY + 'px';
+    document.body.appendChild(ripple);
+
+    setTimeout(() => ripple.remove(), 800);
+  });
+}
+
+// =====================
+// DELAY SECUENCIAL EN CARDS
+// =====================
+document.querySelectorAll('.service-card, .process-card, .skill').forEach((el, i) => {
+  el.style.transitionDelay = `${i * 0.08}s`;
 });
 
+// =====================
+// CONSOLE MESSAGE (Easter Egg para developers)
+// =====================
+console.log(
+  '%c👋 Hola Developer! ',
+  'background: linear-gradient(135deg, #00d9ff 0%, #7c3aed 100%); color: #0a0a0f; font-size: 18px; font-weight: bold; padding: 12px 20px; border-radius: 8px;'
+);
+console.log(
+  '%c¿Te gusta lo que ves? Hablemos: nicoozan2@gmail.com',
+  'color: #00d9ff; font-size: 14px; padding: 8px 0;'
+);
 
+// =====================
+// PERFORMANCE: Lazy loading para imágenes
+// =====================
+if ('loading' in HTMLImageElement.prototype) {
+  const images = document.querySelectorAll('img[loading="lazy"]');
+  images.forEach(img => {
+    img.src = img.src;
+  });
+} else {
+  // Fallback para navegadores sin soporte nativo
+  const script = document.createElement('script');
+  script.src = 'https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js';
+  document.body.appendChild(script);
+}
