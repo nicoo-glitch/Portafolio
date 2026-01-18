@@ -147,7 +147,7 @@ const translations = {
     // Contact
     contact_title: "Let's Work Together",
     contact_text: "Have a project in mind or want to chat? I'm available part-time, remote and freelance.",
-    footer_note: "© 2026 Nico Ozan. Conceptual project for educational purposes."
+    footer_note: "© 2026 Nico Ozan. All rights reserved."
   }
 };
 
@@ -213,12 +213,18 @@ const observer = new IntersectionObserver(
   entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        entry.target.classList.add("show");
+        // Pequeño delay para suavizar la aparición
+        setTimeout(() => {
+          entry.target.classList.add("show");
+        }, 100);
         observer.unobserve(entry.target);
       }
     });
   },
-  { threshold: 0.12, rootMargin: "0px 0px -60px 0px" }
+  { 
+    threshold: 0.08, 
+    rootMargin: "0px 0px -40px 0px" 
+  }
 );
 
 document.querySelectorAll(".fade-up").forEach(el => {
@@ -282,7 +288,7 @@ if (!prefersReduced) {
 }
 
 // =====================
-// PARALLAX SUAVE EN HERO
+// PARALLAX SUAVE EN HERO (Velocidad reducida)
 // =====================
 if (!prefersReduced) {
   let ticking = false;
@@ -294,8 +300,10 @@ if (!prefersReduced) {
         const hero = document.querySelector('.hero-content');
         
         if (hero && scrolled < window.innerHeight) {
-          hero.style.transform = `translateY(${scrolled * 0.25}px)`;
-          hero.style.opacity = 1 - (scrolled / 600);
+          // Velocidad reducida de 0.25 a 0.15 para que sea más suave
+          hero.style.transform = `translateY(${scrolled * 0.15}px)`;
+          // Opacidad más lenta: de 600 a 800
+          hero.style.opacity = 1 - (scrolled / 800);
         }
         
         ticking = false;
