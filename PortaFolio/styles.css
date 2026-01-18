@@ -44,6 +44,27 @@ body {
   overflow-x: hidden;
 }
 
+/* =====================
+   SCROLL PROGRESS BAR
+===================== */
+
+.scroll-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: var(--accent-primary);
+  width: 0%;
+  z-index: 10000;
+  transition: width 0.1s ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-progress-bar {
+    transition: none;
+  }
+}
+
 .container {
   max-width: 1140px;
 }
@@ -304,6 +325,20 @@ footer.show .contact-links {
     flex: 1 1 120px;
     padding: 0.875rem 1.25rem;
   }
+
+  /* Visual card responsive */
+  .visual-card {
+    padding: 1.5rem;
+  }
+
+  .code-snippet {
+    font-size: 0.85rem;
+    line-height: 1.7;
+  }
+
+  .code-line {
+    padding-left: 0.5rem;
+  }
 }
 
 @media (max-width: 576px) {
@@ -387,12 +422,19 @@ footer.show .contact-links {
 
 .lang-switch {
   position: fixed;
-  top: 24px;
-  right: 24px !important;
-  z-index: 1000;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
   display: flex;
   gap: 0.5rem;
   flex-direction: row;
+}
+
+@media (max-width: 768px) {
+  .lang-switch {
+    top: 16px;
+    right: 16px;
+  }
 }
 
 .lang-switch button {
@@ -454,6 +496,14 @@ footer.show .contact-links {
   transform: translate(-50%, -50%);
   opacity: 0.5;
   transition: all 0.2s ease;
+}
+
+/* Ocultar en dispositivos touch */
+@media (hover: none) and (pointer: coarse) {
+  .custom-cursor,
+  .cursor-trail {
+    display: none !important;
+  }
 }
 
 /* Estados del cursor */
@@ -850,11 +900,13 @@ button:hover ~ .custom-cursor,
   font-size: 0.95rem;
   line-height: 1.9;
   padding-top: 1rem;
+  overflow-x: auto;
 }
 
 .code-line {
   padding-left: 1rem;
   color: var(--text-muted);
+  white-space: nowrap;
 }
 
 .code-keyword {

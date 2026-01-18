@@ -73,7 +73,7 @@ const translations = {
     // Contact
     contact_title: "Trabajemos juntos",
     contact_text: "¿Tenés un proyecto en mente o querés charlar? Estoy disponible part-time, remoto y freelance.",
-    footer_note: "© 2026 Nico Ozan. Proyecto conceptual con fines educativos."
+    footer_note: "© 2026 Nico Ozan · Frontend Developer & UI Designer"
   },
 
   en: {
@@ -147,7 +147,7 @@ const translations = {
     // Contact
     contact_title: "Let's Work Together",
     contact_text: "Have a project in mind or want to chat? I'm available part-time, remote and freelance.",
-    footer_note: "© 2026 Nico Ozan. All rights reserved."
+    footer_note: "© 2026 Nico Ozan · Frontend Developer & UI Designer"
   }
 };
 
@@ -188,6 +188,22 @@ document.querySelectorAll("[data-lang]").forEach(btn => {
 // =====================
 const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+// =====================
+// SCROLL PROGRESS BAR
+// =====================
+const scrollProgressBar = document.querySelector('.scroll-progress-bar');
+
+if (scrollProgressBar) {
+  window.addEventListener('scroll', () => {
+    const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (window.scrollY / windowHeight) * 100;
+    scrollProgressBar.style.width = scrolled + '%';
+  });
+}
+
+// =====================
+// SCROLL SUAVE PARA ENLACES INTERNOS
+// =====================
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
     e.preventDefault();
