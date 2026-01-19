@@ -1,4 +1,104 @@
 // =====================
+// LOADING SCREEN
+// =====================
+window.addEventListener('load', () => {
+  const loadingScreen = document.querySelector('.loading-screen');
+  
+  // Esperar un poquito para asegurar que todo cargó
+  setTimeout(() => {
+    loadingScreen.classList.add('hidden');
+    
+    // Remover del DOM después de la transición
+    setTimeout(() => {
+      loadingScreen.remove();
+      
+      // Iniciar animación de typing después del loading
+      setTimeout(initTypingAnimation, 300);
+    }, 500);
+  }, 500);
+});
+
+// =====================
+// TYPING ANIMATION EN HERO
+// =====================
+function initTypingAnimation() {
+  const typingElement = document.getElementById('typing-text');
+  if (!typingElement) return;
+  
+  const savedLang = localStorage.getItem("lang") || "es";
+  
+  const texts = {
+    es: [
+      { text: 'Convierto ', class: '' },
+      { text: 'ideas', class: 'text-gradient' },
+      { text: ' en\n', class: '' },
+      { text: 'interfaces que ', class: '' },
+      { text: 'venden', class: 'text-gradient-alt' }
+    ],
+    en: [
+      { text: 'I turn ', class: '' },
+      { text: 'ideas', class: 'text-gradient' },
+      { text: ' into\n', class: '' },
+      { text: 'interfaces that ', class: '' },
+      { text: 'convert', class: 'text-gradient-alt' }
+    ]
+  };
+  
+  const currentTexts = texts[savedLang];
+  let partIndex = 0;
+  let charIndex = 0;
+  let currentHTML = '';
+  
+  function type() {
+    if (partIndex < currentTexts.length) {
+      const currentPart = currentTexts[partIndex];
+      
+      if (charIndex < currentPart.text.length) {
+        const char = currentPart.text[charIndex];
+        
+        // Si es el primer carácter de esta parte, abrir el span
+        if (charIndex === 0 && currentPart.class) {
+          currentHTML += `<span class="${currentPart.class}">`;
+        }
+        
+        // Agregar carácter (convertir \n a <br>)
+        if (char === '\n') {
+          currentHTML += '<br/>';
+        } else {
+          currentHTML += char;
+        }
+        
+        charIndex++;
+        typingElement.innerHTML = currentHTML;
+        
+        // Velocidad variable: más lento en palabras importantes
+        const delay = currentPart.class ? 80 : 50;
+        setTimeout(type, delay);
+      } else {
+        // Cerrar el span si tiene clase
+        if (currentPart.class) {
+          currentHTML += '</span>';
+          typingElement.innerHTML = currentHTML;
+        }
+        
+        // Pasar a la siguiente parte
+        partIndex++;
+        charIndex = 0;
+        setTimeout(type, 100);
+      }
+    } else {
+      // Animación completa - ocultar cursor después de 2 segundos
+      setTimeout(() => {
+        const cursor = document.querySelector('.typing-cursor');
+        if (cursor) cursor.style.display = 'none';
+      }, 2000);
+    }
+  }
+  
+  type();
+}
+
+// =====================
 // TRADUCCIONES ACTUALIZADAS
 // =====================
 const translations = {

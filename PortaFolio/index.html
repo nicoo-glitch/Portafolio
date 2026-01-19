@@ -29,6 +29,12 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <!-- Loading screen -->
+    <div class="loading-screen">
+      <div class="spinner"></div>
+      <p class="loading-text">Cargando...</p>
+    </div>
+
     <!-- Progress bar de scroll -->
     <div class="scroll-progress-bar"></div>
 
@@ -57,14 +63,9 @@
           <span data-i18n="hero_badge">Disponible para proyectos</span>
         </div>
 
-        <!-- Título con gradient -->
+        <!-- Título con gradient y efecto typing -->
         <h1>
-          <span data-i18n="hero_title_part1">Convierto</span> 
-          <span class="text-gradient" data-i18n="hero_title_highlight1">ideas</span> 
-          <span data-i18n="hero_title_part2">en</span>
-          <br/>
-          <span data-i18n="hero_title_part3">interfaces que</span> 
-          <span class="text-gradient-alt" data-i18n="hero_title_highlight2">venden</span>
+          <span id="typing-text"></span><span class="typing-cursor">|</span>
         </h1>
 
         <p class="hero-subtitle" data-i18n="hero_subtitle">
