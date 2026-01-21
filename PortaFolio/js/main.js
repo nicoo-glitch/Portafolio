@@ -173,7 +173,7 @@ const translations = {
     // Contact
     contact_title: "Trabajemos juntos",
     contact_text: "¿Tenés un proyecto en mente o querés charlar? Estoy disponible part-time, remoto y freelance.",
-    footer_note: "© 2026 Nico Ozan · Frontend Developer & UI Designer"
+    footer_note: "© 2026 Nico Ozan · Frontend Developer - Todos los derechos reservados."
   },
 
   en: {
@@ -247,7 +247,7 @@ const translations = {
     // Contact
     contact_title: "Let's Work Together",
     contact_text: "Have a project in mind or want to chat? I'm available part-time, remote and freelance.",
-    footer_note: "© 2026 Nico Ozan · Frontend Developer & UI Designer"
+    footer_note: " © 2026 Nico Ozan · Frontend Developer - Todos los derechos reservados."
   }
 };
 
