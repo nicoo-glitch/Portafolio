@@ -173,7 +173,7 @@ const translations = {
     // Contact
     contact_title: "Trabajemos juntos",
     contact_text: "¿Tenés un proyecto en mente o querés charlar? Estoy disponible part-time, remoto y freelance.",
-    footer_note: "© 2026 Nico Ozan · Frontend Developer - Todos los derechos reservados."
+    footer_note: "© 2026 Nico Ozan · Frontend Developer & UI Designer"
   },
 
   en: {
@@ -247,7 +247,7 @@ const translations = {
     // Contact
     contact_title: "Let's Work Together",
     contact_text: "Have a project in mind or want to chat? I'm available part-time, remote and freelance.",
-    footer_note: " © 2026 Nico Ozan · Frontend Developer - Todos los derechos reservados."
+    footer_note: "© 2026 Nico Ozan · Frontend Developer & UI Designer"
   }
 };
 
@@ -289,16 +289,28 @@ document.querySelectorAll("[data-lang]").forEach(btn => {
 const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 // =====================
-// SCROLL PROGRESS BAR
+// SCROLL PROGRESS BAR (Mejorado para mobile)
 // =====================
 const scrollProgressBar = document.querySelector('.scroll-progress-bar');
 
 if (scrollProgressBar) {
-  window.addEventListener('scroll', () => {
+  function updateProgressBar() {
     const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
     const scrolled = (window.scrollY / windowHeight) * 100;
-    scrollProgressBar.style.width = scrolled + '%';
-  });
+    
+    // Asegurar que el valor esté entre 0 y 100
+    const progress = Math.min(Math.max(scrolled, 0), 100);
+    scrollProgressBar.style.width = progress + '%';
+  }
+  
+  // Escuchar scroll normal
+  window.addEventListener('scroll', updateProgressBar, { passive: true });
+  
+  // También escuchar en touch devices
+  window.addEventListener('touchmove', updateProgressBar, { passive: true });
+  
+  // Actualizar al cargar
+  updateProgressBar();
 }
 
 // =====================
