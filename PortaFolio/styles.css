@@ -393,6 +393,12 @@ footer.show .contact-links {
     margin-bottom: 2.5rem;
   }
 
+  /* ABOUT GRID - REFORZADO */
+  .about-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2.5rem;
+  }
+
   .about-highlights {
     gap: 1.25rem;
   }
